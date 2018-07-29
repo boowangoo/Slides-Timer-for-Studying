@@ -1,0 +1,33 @@
+<html lang="en" ng-app>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    
+  </head>
+  <body>
+    <div ng-controller="toDoCtrl">
+      <div class="time-curr">
+        Current Time:
+        {{minute}}:{{second}}
+      </div>
+      <div class="time-elapsed">
+        Elapsed Time:
+        {{hourElapsed}}:{{minuteElapsed}}:{{secondElasped}}
+        <button type="submit" ng-click="reset()">Reset Time</button>
+      </div>
+      <div class="track-slides">
+        You should be on slide {{slide}}
+      </div>
+      <form action="">
+        Enter Current Slide:
+        <input type="text" ng-model="currSlide"/>
+        <button type="submit" ng-click="updateSlide()">Update</button>
+        </br>
+        Enter Slide Speed:
+        <input type="text" ng-model="slideSpeed"/>
+      <button type="submit" ng-click="updateSpeed()">Update</button>
+      </form>
+    </div>
+  </body>
+</html>
